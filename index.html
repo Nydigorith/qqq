@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+      }
+      #questionDisplay {
+        font-size: 1.5em;
+        margin: 20px 0;
+        color: #333;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Question</h1>
+    <div id="questionDisplay">-------</div>
+    <button onclick="displayRandomQuestion()">Get Question</button>
+
+    <script>
+      const questions = [
+        "Tell me about yourself.",
+        "Compare yourself into.",
+        "Why do you choose IT?",
+        "Onsite, online, or hybrid?",
+        "What is your motto in life?",
+        "What are your strengths and weaknesses?",
+        "How would you describe yourself?",
+        "What can you contribute to the company?",
+        "How do you see yourself years from now? What are your career goals?",
+        "What is your salary expectation?",
+        "What motivates you?",
+        "How did you hear about this position?",
+        "Why do you want to work at this company?",
+        "Why do you want this job?",
+        "What is your greatest professional achievement?",
+        "Tell me about a time you demonstrated leadership skills.",
+        "Tell me about a time you failed.",
+        "What type of work environment do you prefer?",
+        "How do you deal with pressure or stressful situations?",
+        "What do you like to do outside of work?",
+        "How do you stay organized?",
+        "How do you prioritize your work?",
+        "What’s your work style?",
+        "Do you consider yourself successful?",
+        "How do you plan to achieve your career goals?",
+        "What makes you unique?",
+        "Why should we hire you?",
+        "Share your experience.",
+        "What do you know about our company?",
+      ];
+
+      function displayRandomQuestion() {
+        const randomIndex = Math.floor(Math.random() * questions.length);
+        const question = questions[randomIndex];
+        document.getElementById("questionDisplay").innerText = question;
+      }
+    </script>
+  </body>
+</html>
